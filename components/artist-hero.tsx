@@ -4,6 +4,10 @@ import { Palette, Mail, Phone, Globe, Instagram, Facebook } from "lucide-react"
 export async function ArtistHero() {
   const artist = await getArtistInfo()
 
+  if (!artist) {
+    return null
+  }
+
   return (
     <section className="relative py-20 px-4 overflow-hidden">
       {/* Background watercolor effects */}
